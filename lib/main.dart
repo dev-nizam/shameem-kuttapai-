@@ -1,4 +1,5 @@
 import 'package:ecommerce/Login.dart';
+import 'package:ecommerce/Nabati.dart';
 import 'package:ecommerce/Shoppingcart.dart';
 import 'package:ecommerce/SignUp.dart';
 import 'package:flutter/material.dart';
