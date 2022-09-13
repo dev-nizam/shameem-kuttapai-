@@ -2,10 +2,15 @@ import 'package:ecommerce/Login.dart';
 import 'package:ecommerce/Nabati.dart';
 import 'package:ecommerce/Shoppingcart.dart';
 import 'package:ecommerce/SignUp.dart';
+import 'package:ecommerce/provider/UserProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(  MultiProvider(providers: [
+    ChangeNotifierProvider<UserProvider>(create: (_) => UserProvider()),
+  ],
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +26,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home:ShoppingCart(),
+      home:LoginPage(),
     );
   }
 }
